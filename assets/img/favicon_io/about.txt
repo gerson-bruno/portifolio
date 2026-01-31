@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Danfo
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/danfo/v4/snf3s0u_98t16THfK1Csj3N41ZqbYDe5S71ToPrNKQ.ttf
-- Font License: undefined)

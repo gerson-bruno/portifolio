@@ -282,6 +282,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   width: 25%;
+  font-size: smaller;
 }
 
 .skills__bar-container {
