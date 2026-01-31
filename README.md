@@ -1,6 +1,6 @@
 # Portfólio - Gerson Bruno
 
-Este é o portfólio de estudos de **Gerson Bruno**, focado em **Front-end**.  
+Este é o meu portifólio de estudos, focado em **Front-end**.  
 O projeto reúne páginas e seções desenvolvidas para prática de HTML, CSS e JavaScript, incluindo:
 
 - Seção **Home** com apresentação pessoal e links de redes sociais.
@@ -23,7 +23,8 @@ Este portfólio é **um projeto de estudo e prática**, com foco em desenvolver 
 
 ## Como visualizar
 
-Basta abrir o arquivo `index.html` no navegador ou hospedar o projeto usando GitHub Pages.
+Para visualizar meu portfólio, [clique aqui 😎](https://gerson-bruno.github.io/portifolio/)
+
 
 ---
 
