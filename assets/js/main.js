@@ -65,3 +65,6 @@ function fillSkills(){
 }
 
 window.addEventListener('load', fillSkills);
+
+// ===== COPYRIGHT AUTOMÁTICO =====
+document.querySelector('.footer p').textContent = `© ${new Date().getFullYear()} Gerson Bruno. Todos os direitos reservados.`;
