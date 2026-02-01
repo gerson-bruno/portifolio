@@ -6,12 +6,10 @@
   --header-height: 3rem;
   --font-semi: 600;
   
-  /*===== Cores =====*/
-  /*Roxo 260 - Vermelho 355 - Azul 224 - Rosa 340*/
-  /* Modo de cor HSL */
-  --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+ /*===== Cores =====*/
+  --hue-color: 180;
+  --first-color: #3a5f6f;
+  --second-color: #1F2933;
   
   /*===== Fonte e tipografia =====*/
   --body-font: "Poppins", sans-serif;
@@ -302,7 +300,7 @@ img {
 
 .skills__bar {
   height: 100%;
-  background-color: hsl(224, 89%, 60%);
+  background-color: #D97706;
   width: 0;
   border-radius: 0.5rem;
   transition: width 1.5s ease-in-out;
