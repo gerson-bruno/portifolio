@@ -20,7 +20,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+/*==================== ATIVA O LINK CONFORME A SEÇÃO VISÍVEL NA ROLAGEM (SCROLL SECTIONS ACTIVE LINK) ====================*/
 const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () =>{
@@ -41,7 +41,7 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-/*===== SCROLL REVEAL ANIMATION =====*/
+/*===== ANIMAÇÃO DE REVELAÇÃO AO ROLAR A PÁGINA (SCROLL REVEAL ANIMATION) =====*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
@@ -54,7 +54,7 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
-/*===== SKILLS ANIMATION =====*/
+/*===== ANIMAÇÃO DE HABILIDADES (SKILLS ANIMATION) =====*/
 const skillBars = document.querySelectorAll('.skills__bar');
 
 function fillSkills(){

@@ -1,17 +1,17 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/*===== VARIABLES CSS =====*/
+/*===== VARIÁVEIS DA CSS =====*/
 :root{
     --header-height: 3rem;
     --font-semi: 600;
     
-    /*===== Colors =====*/
+    /*===== Cores =====*/
     --hue-color: 224;
     --first-color: hsl(var(--hue-color), 89%, 60%);
     --second-color: hsl(var(--hue-color), 56%, 12%);
 
-    /*===== Font and typography =====*/
+    /*===== Fonte e tipografia =====*/
     --body-font: 'Poppins', sans-serif;
 
     --big-font-size: 2rem;
@@ -19,7 +19,7 @@
     --normal-font-size: .938rem;
     --smaller-font-size: .75rem;
 
-    /*===== Margins =====*/
+    /*===== Margens =====*/
     --mb-2: 1rem;
     --mb-4: 2rem;
     --mb-5: 2.5rem;
@@ -67,7 +67,7 @@ img{
     display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*===== CLASSE DA CSS ===== */
 .section-title{
     position: relative;
     font-size: var(--h2-font-size);
@@ -158,7 +158,7 @@ img{
         cursor: pointer;
     }
 }
-/*Active menu*/
+/*Menu Ativo*/
 .active-link::after{
     position: absolute;
     content: '';
@@ -169,12 +169,12 @@ img{
     background-color: var(--first-color);
 }
 
-/*=== Show menu ===*/
+/*=== Mostrar menu ===*/
 .show{
     right: 0;
 }
 
-/*===== HOME =====*/
+/*===== INÍCIO =====*/
 .home{
     position: relative;
     row-gap: 5rem;
@@ -221,7 +221,7 @@ img{
     }
 }
 
-/*BUTTONS*/
+/*BOTÕES*/
 .button{
     display: inline-block;
     background-color: var(--first-color);
@@ -236,7 +236,7 @@ img{
     }
 }
 
-/* ===== ABOUT =====*/
+/* ===== SOBRE =====*/
 .about{
     &__container{
         row-gap: 2rem;
@@ -256,7 +256,7 @@ img{
     }
 }
 
-/* ===== SKILLS =====*/
+/* ===== HABILIDADES =====*/
 .skills{
     &__container{
         row-gap: 2rem;
@@ -336,7 +336,7 @@ img{
     }
 }
 
-/* ===== FOOTER =====*/
+/* ===== ROTAPÉ =====*/
 .footer{
     background-color: var(--second-color);
     color: #fff;
@@ -361,7 +361,7 @@ img{
     }
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== CONSULTAS DE MÍDIAS =====*/
 @media screen and (max-width: 320px){
     .home{
         row-gap: 2rem;

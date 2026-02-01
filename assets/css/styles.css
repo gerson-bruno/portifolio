@@ -1,30 +1,36 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+
+/*===== VARIÁVEIS CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
+  
+  /*===== Cores =====*/
+  /*Roxo 260 - Vermelho 355 - Azul 224 - Rosa 340*/
+  /* Modo de cor HSL */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+  
+  /*===== Fonte e tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+  
+  /*===== Margens =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
+  
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
+
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
@@ -70,7 +76,7 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*===== CLASSES CSS ===== */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -114,7 +120,7 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/*===== NAV =====*/
+/*===== NAVEGAÇÃO (NAV) =====*/
 .nav {
   height: var(--header-height);
   display: flex;
@@ -162,7 +168,7 @@ img {
   cursor: pointer;
 }
 
-/*Active menu*/
+/* Menu Ativo */
 .active-link::after {
   position: absolute;
   content: "";
@@ -173,12 +179,12 @@ img {
   background-color: var(--first-color);
 }
 
-/*=== Show menu ===*/
+/*=== Mostrar menu ===*/
 .show {
   right: 0;
 }
 
-/*===== HOME =====*/
+/*===== HOME (INÍCIO) =====*/
 .home {
   position: relative;
   row-gap: 5rem;
@@ -220,7 +226,7 @@ img {
   width: 360px;
 }
 
-/*BUTTONS*/
+/* BOTÕES */
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -234,7 +240,7 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== ABOUT =====*/
+/* ===== SOBRE (ABOUT) =====*/
 .about__container {
   row-gap: 2rem;
   text-align: center;
@@ -250,7 +256,7 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== SKILLS ===== */
+/* ===== HABILIDADES (SKILLS) ===== */
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -332,15 +338,7 @@ img {
     display: block;
 }
 
-
-/* Valores reais das barras */
-.skills__html .skills__bar { width: 85%; }
-.skills__css .skills__bar { width: 80%; }
-.skills__js .skills__bar { width: 65%; }
-.skills__ux .skills__bar { width: 70%; }
-.skills__react .skills__bar { width: 60%; }
-.skills__node .skills__bar { width: 50%; }
-/* ===== WORK =====*/
+/* ===== TRABALHOS (WORK) =====*/
 .work__container {
   row-gap: 2rem;
 }
@@ -356,7 +354,7 @@ img {
   transform: scale(1.1);
 }
 
-/* ===== CONTACT =====*/
+/* ===== CONTATO (CONTACT) =====*/
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
@@ -376,7 +374,7 @@ img {
   margin-left: auto;
 }
 
-/* ===== FOOTER =====*/
+/* ===== RODAPÉ (FOOTER) =====*/
 .footer {
   background-color: var(--second-color);
   color: #fff;
@@ -400,7 +398,7 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES (RESPONSIVIDADE) =====*/
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
