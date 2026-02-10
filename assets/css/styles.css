@@ -1,30 +1,29 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-
 /*===== VARIÁVEIS CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  
- /*===== Cores =====*/
+
+  /*===== Cores =====*/
   --hue-color: 180;
   --first-color: #3a5f6f;
   --second-color: #1F2933;
-  
+
   /*===== Fonte e tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  
+
   /*===== Margens =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  
+
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
@@ -75,8 +74,7 @@ img {
   display: block;
 }
 
-
-/*===== CLASSES CSS ===== */
+/*===== CLASSES CSS =====*/
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -146,9 +144,6 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
-}
-.nav__link:hover {
-  position: relative;
 }
 .nav__link:hover::after {
   position: absolute;
@@ -270,88 +265,88 @@ img {
   margin-bottom: var(--mb-4);
 }
 
-/* Blocos de habilidades */
-.skills__data {
+/* ===== NOVO BLOCO DE ÍCONES ===== */
+.skills__icons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14,36,49,0.15);
-  font-weight: 600;
-  background-color: #f5f5f5;
 }
 
-.skills__names {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 25%;
-  font-size: smaller;
+.skills__icons .skills__icon {
+  font-size: 2.5rem;
+  color: var(--second-color);
+  transition: transform 0.3s, color 0.3s;
+  cursor: default;
 }
 
-.skills__bar-container {
-  flex: 1;
-  background-color: #e0e0e0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  height: 0.5rem;
-  margin-right: 1rem;
+.skills__icons .skills__icon:hover {
+  transform: scale(1.2);
+  color: var(--first-color);
 }
-
-.skills__bar {
-  height: 100%;
-  background-color: #D97706;
-  width: 0;
-  border-radius: 0.5rem;
-  transition: width 1.5s ease-in-out;
-}
-
-.skills__percentage {
-  width: 40px;
-  text-align: right;
-  font-weight: 600;
-}
-
-/* Valores reais das barras */
-.skills__html .skills__bar { width: 85%; }
-.skills__css .skills__bar { width: 80%; }
-.skills__js .skills__bar { width: 65%; }
-.skills__ux .skills__bar { width: 70%; }
-.skills__react .skills__bar { width: 60%; }
-.skills__node .skills__bar { width: 50%; }
 
 /* ===== IMAGEM DAS SKILLS ===== */
 .skills__img-container {
-    border-radius: 0.5rem;   /* bordas arredondadas */
-    overflow: hidden;        /* importante para cortar a imagem */
+    border-radius: 0.5rem;
+    overflow: hidden;
     width: 100%;
     display: block;
-    box-shadow: 0px 4px 25px rgba(14,36,49,0.15); /* sombra igual dos blocos */
+    box-shadow: 0px 4px 25px rgba(14,36,49,0.15);
 }
 
 .skills__img-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;       /* mantém proporção e preenche o container */
+    object-fit: cover;
     display: block;
 }
 
 /* ===== TRABALHOS (WORK) =====*/
 .work__container {
+  display: grid;
+  gap: 2rem;
   row-gap: 2rem;
 }
+
+.work__item {
+  text-align: center;
+}
+
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  display: block;
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(14,36,49,0.15);
+  transition: transform 0.5s;
 }
+
 .work__img img {
-  transition: 1s;
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  transition: transform 0.5s;
 }
-.work__img img:hover {
-  transform: scale(1.1);
+
+.work__img:hover img {
+  transform: scale(1.05);
+}
+
+.work__desc {
+  font-size: 0.65rem;
+  color: var(--second-color);
+  margin-top: 0.5rem;
+}
+
+.work__desc a {
+  color: var(--first-color);
+  text-decoration: none;
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
+.work__desc a:hover {
+  text-decoration: underline;
 }
 
 /* ===== CONTATO (CONTACT) =====*/

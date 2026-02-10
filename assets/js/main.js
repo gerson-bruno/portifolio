@@ -1,70 +1,39 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
-
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle','nav-menu')
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== ATIVA O LINK CONFORME A SEÇÃO VISÍVEL NA ROLAGEM (SCROLL SECTIONS ACTIVE LINK) ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-const scrollActive = () =>{
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*===== ANIMAÇÃO DE REVELAÇÃO AO ROLAR A PÁGINA (SCROLL REVEAL ANIMATION) =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-});
-
+/*===== ANIMAÇÃO DE REVELAÇÃO =====*/
+const sr = ScrollReveal({ origin: 'top', distance: '60px', duration: 2000, delay: 200 });
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.skills__icons, .work__img, .contact__input',{interval: 200}); 
 
-/*===== ANIMAÇÃO DE HABILIDADES (SKILLS ANIMATION) =====*/
-const skillBars = document.querySelectorAll('.skills__bar');
+/*===== MENU MOBILE =====*/
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
+  if(toggle && nav){
+      toggle.addEventListener('click', ()=> nav.classList.toggle('show'));
+  }
+};
+showMenu('nav-toggle','nav-menu');
 
-function fillSkills(){
-    skillBars.forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = width;
-    });
-}
+const navLink = document.querySelectorAll('.nav__link');
+navLink.forEach(n => n.addEventListener('click', ()=> document.getElementById('nav-menu').classList.remove('show')));
 
-window.addEventListener('load', fillSkills);
+/*===== LINKS ATIVOS =====*/
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const scrollY = window.pageYOffset;
+  sections.forEach(current => {
+      const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+          sectionsClass.classList.add('active-link');
+      }else{
+          sectionsClass.classList.remove('active-link');
+      }                                                    
+  });
+});
 
-// ===== COPYRIGHT AUTOMÁTICO =====
+/*===== COPYRIGHT AUTOMÁTICO =====*/
 document.querySelector('.footer p').textContent = `© ${new Date().getFullYear()} Gerson Bruno. Todos os direitos reservados.`;
