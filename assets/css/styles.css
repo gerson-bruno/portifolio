@@ -369,7 +369,6 @@ img {
   margin-left: auto;
 }
 
-/* ===== RODAPÉ (FOOTER) =====*/
 .footer {
   background-color: var(--second-color);
   color: #fff;
@@ -377,21 +376,32 @@ img {
   font-weight: var(--font-semi);
   padding: 2rem 0;
 }
-.footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
-}
+
 .footer__social {
+  display: flex;
+  justify-content: center; /* centraliza os ícones */
+  gap: 1rem; /* espaço entre os ícones */
   margin-bottom: var(--mb-4);
 }
-.footer__icon {
+
+.footer__social-icon {
   font-size: 1.5rem;
   color: #fff;
-  margin: 0 var(--mb-2);
+  transition: color 0.3s;
 }
+
+.footer__social-icon:hover {
+  color: var(--first-color);
+}
+
+/* Copyright com fonte fina e pequena */
 .footer__copy {
-  font-size: var(--smaller-font-size);
+  font-size: 0.65rem;  /* bem pequeno */
+  font-weight: 300;    /* fonte fina */
+  color: #fff;
 }
+
+
 
 /* ===== MEDIA QUERIES (RESPONSIVIDADE) =====*/
 @media screen and (max-width: 320px) {
