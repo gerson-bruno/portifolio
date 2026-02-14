@@ -433,25 +433,8 @@ img {
   text-decoration: underline;
 }
 
-/* ===== CONTATO (CONTACT) =====*/
-.contact__input {
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
-.contact__button {
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
-}
+/* ===== FOOTER =====*/
+
 
 .footer {
   background-color: var(--footer-bg);
@@ -459,6 +442,7 @@ img {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  margin-top: 25px;
   transition: background-color 0.3s ease;
 }
 
