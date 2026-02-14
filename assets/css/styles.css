@@ -245,18 +245,27 @@ img {
 }
 
 /* BOTÕES */
+/* Animação suave de pulso */
 .button {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
+  margin-top: 30px;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
-  margin-top: 25px;
   border-radius: 0.5rem;
-  transition: 0.3s;
+  transition: 0.3s, transform 0.3s;
 }
+
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 /* Container do switch */
