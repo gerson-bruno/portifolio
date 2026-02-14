@@ -8,19 +8,17 @@
   --bg-color: #ffffff;
   --footer-bg: var(--second-color);
 
-
-
   /*===== Cores =====*/
   --hue-color: 180;
   --first-color: #3a5f6f;
-  --second-color: #1F2933;
+  --second-color: #1f2933;
 
   /*===== Fonte e tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
 
   /*===== Margens =====*/
   --mb-2: 1rem;
@@ -38,12 +36,14 @@
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
 /*===== BASE =====*/
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -57,20 +57,21 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--bg-color);
   color: var(--second-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
-
 
 body.dark_mode {
-  --bg-color: #17171F;
-  --second-color: #E4E4E7;
-  --first-color: #4DA6FF;
+  --bg-color: #17171f;
+  --second-color: #e4e4e7;
+  --first-color: #4da6ff;
   --footer-bg: #111118;
-
 }
 
-
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 
@@ -207,7 +208,7 @@ img {
 
 /*=== Quebra do texto de apresentação ===*/
 .home__data h2 {
-  line-height: 1.4; 
+  line-height: 1.4;
   max-width: 500px;
 }
 
@@ -254,7 +255,9 @@ img {
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
-  transition: 0.3s, transform 0.3s;
+  transition:
+    0.3s,
+    transform 0.3s;
 }
 
 .button:hover {
@@ -263,9 +266,15 @@ img {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Container do switch */
@@ -317,8 +326,6 @@ img {
   transform: translateX(24px);
 }
 
-
-
 /* ===== SOBRE (ABOUT) =====*/
 .about__container {
   row-gap: 2rem;
@@ -361,7 +368,9 @@ img {
 .skills__icons .skills__icon {
   font-size: 2.5rem;
   color: var(--second-color);
-  transition: transform 0.3s, color 0.3s;
+  transition:
+    transform 0.3s,
+    color 0.3s;
   cursor: default;
 }
 
@@ -372,18 +381,18 @@ img {
 
 /* ===== IMAGEM DAS SKILLS ===== */
 .skills__img-container {
-    border-radius: 0.5rem;
-    overflow: hidden;
-    width: 100%;
-    display: block;
-    box-shadow: 0px 4px 25px rgba(14,36,49,0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 
 .skills__img-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 /* ===== TRABALHOS (WORK) =====*/
@@ -401,7 +410,7 @@ img {
   display: block;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0px 4px 25px rgba(14,36,49,0.15);
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   transition: transform 0.5s;
 }
 
@@ -435,7 +444,6 @@ img {
 
 /* ===== FOOTER =====*/
 
-
 .footer {
   background-color: var(--footer-bg);
   color: #fff;
@@ -445,7 +453,6 @@ img {
   margin-top: 25px;
   transition: background-color 0.3s ease;
 }
-
 
 .footer__social {
   display: flex;
@@ -466,12 +473,10 @@ img {
 
 /* Copyright com fonte fina e pequena */
 .footer__copy {
-  font-size: 0.65rem;  /* bem pequeno */
-  font-weight: 300;    /* fonte fina */
+  font-size: 0.65rem; /* bem pequeno */
+  font-weight: 300; /* fonte fina */
   color: #fff;
 }
-
-
 
 /* ===== MEDIA QUERIES (RESPONSIVIDADE) =====*/
 @media screen and (max-width: 320px) {
@@ -594,13 +599,13 @@ img {
 
 /* ===== DARK MODE MENU MOBILE ===== */
 body.dark_mode .nav__menu {
-  background-color: #17171F; /* fundo escuro do menu */
+  background-color: #17171f; /* fundo escuro do menu */
 }
 
 body.dark_mode .nav__link {
-  color: #E4E4E7; /* letras do menu escuro */
+  color: #e4e4e7; /* letras do menu escuro */
 }
 
 body.dark_mode .nav__link:hover::after {
-  background-color: #4DA6FF; /* destaque ao passar o mouse */
+  background-color: #4da6ff; /* destaque ao passar o mouse */
 }

@@ -9,7 +9,6 @@ Aqui você encontra projetos e seções desenvolvidas para prática de **HTML, C
 - **Sobre** – Informações sobre minha trajetória, estudos e habilidades.  
 - **Skills** – Demonstração de habilidades técnicas e experiência prática.  
 - **Work** – Exemplos de projetos e trabalhos realizados.  
-- **Contato** – Formulário funcional com **EmailJS** para envio de mensagens.  
 
 ## 🛠 Tecnologias utilizadas
 
@@ -17,7 +16,7 @@ Aqui você encontra projetos e seções desenvolvidas para prática de **HTML, C
 - CSS3 / SCSS  
 - JavaScript  
 - Boxicons para ícones  
-- **EmailJS** para envio de mensagens do formulário  
+
 
 ## 💡 Observações
 
