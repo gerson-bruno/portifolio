@@ -37,3 +37,23 @@ window.addEventListener('scroll', () => {
 
 /*===== COPYRIGHT AUTOMÁTICO =====*/
 document.querySelector('.footer p').textContent = `© ${new Date().getFullYear()} Gerson Bruno. Todos os direitos reservados.`;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkToggle = document.getElementById('dark-toggle');
+
+  // verifica localStorage
+  if(localStorage.getItem('darkMode') === 'enabled'){
+    document.body.classList.add('dark_mode');
+    darkToggle.checked = true; // mantém o checkbox marcado
+  }
+
+  darkToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark_mode');
+
+    if(document.body.classList.contains('dark_mode')){
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
+});

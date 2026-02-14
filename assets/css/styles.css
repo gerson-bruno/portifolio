@@ -5,6 +5,10 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
+  --bg-color: #ffffff;
+  --footer-bg: var(--second-color);
+
+
 
   /*===== Cores =====*/
   --hue-color: 180;
@@ -51,8 +55,20 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  background-color: var(--bg-color);
   color: var(--second-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+body.dark_mode {
+  --bg-color: #17171F;
+  --second-color: #E4E4E7;
+  --first-color: #4DA6FF;
+  --footer-bg: #111118;
+
+}
+
 
 h1, h2, p {
   margin: 0;
@@ -114,7 +130,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: var(--bg-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -188,6 +204,13 @@ img {
 .home__data {
   align-self: center;
 }
+
+/*=== Quebra do texto de apresentação ===*/
+.home__data h2 {
+  line-height: 1.4; 
+  max-width: 500px;
+}
+
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
@@ -228,12 +251,64 @@ img {
   color: #fff;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
+  margin-top: 25px;
   border-radius: 0.5rem;
   transition: 0.3s;
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
+
+/* Container do switch */
+.dark-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Input escondido */
+.dark-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo do slider */
+.dark-switch label {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--first-color);
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.dark-switch label::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Quando ativo */
+.dark-switch input:checked + label {
+  background-color: var(--second-color);
+}
+
+.dark-switch input:checked + label::before {
+  transform: translateX(24px);
+}
+
+
 
 /* ===== SOBRE (ABOUT) =====*/
 .about__container {
@@ -370,12 +445,14 @@ img {
 }
 
 .footer {
-  background-color: var(--second-color);
+  background-color: var(--footer-bg);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  transition: background-color 0.3s ease;
 }
+
 
 .footer__social {
   display: flex;
@@ -520,4 +597,17 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+/* ===== DARK MODE MENU MOBILE ===== */
+body.dark_mode .nav__menu {
+  background-color: #17171F; /* fundo escuro do menu */
+}
+
+body.dark_mode .nav__link {
+  color: #E4E4E7; /* letras do menu escuro */
+}
+
+body.dark_mode .nav__link:hover::after {
+  background-color: #4DA6FF; /* destaque ao passar o mouse */
 }
